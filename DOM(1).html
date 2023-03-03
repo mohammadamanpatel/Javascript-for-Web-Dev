@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model</title>
+</head>
+<body>
+    <!-- Manipulating by id -->
+    <div id="div">Lorem, ipsum dolor sit amet <span>consectetur adipisicing elit.</span><p>Lorem, ipsum.</p></div>
+    <!-- Manipulating by className -->
+    <ul>
+        <li class="name">Aman</li>
+        <li class="name">Ramiz</li>
+        <li class="name">Faizan</li>
+        <li class="name">Ayaan</li>
+    </ul>
+    <!-- Manipulating by TagName -->
+    <h1>Goku</h1>
+    <h1>Broly</h1>
+    <h1>Vegeta</h1>
+    <!-- Query Selector -->
+    <div class="frog">Frog</div>
+    <div id="lion">lion</div>
+    <h2>snake</h2>
+    <script>
+         let Var = document.getElementById("div")
+        //  console.log(Var);
+        // console.log(Var.innerText)
+        // console.log(Var.innerHTML) 
+
+        let Var1 = document.getElementsByClassName("name")
+        console.log(Var1)
+        console.log(Var1[0].innerText)
+        console.log(Var1[1].innerText)
+        console.log(Var1[2].innerText)
+        console.log(Var1[3].innerText)
+        Var1[3].innerText = "Amaan"; 
+
+        let Var2 = document.getElementsByTagName("h1")
+        console.log(Var2)
+        Var2[0].innerText = "Kakarot"
+        Var2[2].innerText = "ultra vegeta"
+        Var2[0].style.color = "indigo"
+
+        let Var3 = document.querySelector("#lion")
+        Var3.style.color = "red"
+         
+        Var3 = document.querySelector("h2")
+        console.log(Var3) 
+
+        Var3 = document.querySelector(".frog")
+        Var3.className = "lizard"
+        Var3.classList = "kangaroo,reptile,animal"
+        console.log(Var3)
+        Var3.setAttribute("title","tiger")
+    </script>
+</body>
+</html>
