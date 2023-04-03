@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter App</title>
+     
+    <!-- adding the css file -->
+  </head>
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* designing the counter container */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 0 0 5px black;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+/* designing the buttons */
+button {
+  padding: 5px 15px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#displayValue {
+  font-size: 25px;
+  padding: 5px 15px;
+  border: 1px solid black;
+}
+  </style>
+  <body>
+    <!-- for counter app card -->
+    <div class="container">
+      <h1>Counter App</h1>
+
+      <div>
+        <button id="decrementBtn">Decrement by 1</button>
+        <span id="displayValue">0</span>
+        <button id="incrementBtn">Increment by 1</button>
+      </div>
+
+      <!-- button to reset the value -->
+      <button id="resetBtn">Reset Value</button>
+    </div>
+  </body>
+
+  <!-- adding the js file -->
+</html>
+<script>
+    let reset = document.querySelector("#resetBtn")
+    let incBtn = document.getElementById("incrementBtn");
+    let decBtn = document.getElementById("decrementBtn");
+    function Reset()
+    {
+        document.getElementById("displayValue").innerText = 0;
+    }
+    reset.addEventListener("click",Reset)
+    incBtn.addEventListener("click",()=>{
+      let value = Number(displayValue.innerText)
+      if(value>10)
+      {
+        alert("values more than 10 not allowed")
+      }
+      else{
+        displayValue.innerText = value+1;
+      }
+    })
+    decBtn.addEventListener("click",()=>{
+      let value = Number(displayValue.innerText)
+      if(value<0)
+      {
+        alert("value less than 10 not allowed")
+      }
+      else{
+        displayValue.innerText = value-1;
+      }
+    })
+</script>
